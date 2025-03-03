@@ -1,0 +1,128 @@
+//Paleta de colores
+$color1:#000814;
+$color2:#001D3D;
+$color3:#003566;
+$color4:#FFC300;
+$color5:#FFD60A;
+$color6:#FFFFFF;
+
+//Fuentes
+@mixin oswald ($weight){
+    font-family: "Oswald", serif;
+    font-optical-sizing: auto;
+    font-weight: $weight;
+    font-style: normal;
+}
+
+@mixin nunito ($weight){
+    font-family: "Nunito", serif;
+    font-optical-sizing: auto;
+    font-weight: $weight;
+    font-style: normal;
+} 
+ //Encabezados
+@mixin titulo{
+    height: 8em;
+    padding-top: 2em;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    i{
+        color:$color4;
+    }
+
+    h2{
+        height: 2em;
+        align-content: center;
+        color: $color4;
+        font-size: 14px;
+        text-transform: uppercase;
+        @include nunito(200);
+    }
+}
+
+//Puntos en linea de tiempo
+@mixin puntos($row){
+    grid-column: 2/3;
+    grid-row: $row;
+    background-color:$color4;
+    justify-self: center;
+    align-self: center;
+    border-radius: 50px;
+    height: 12px;
+    width: 12px;
+}
+
+//Burbujas
+@mixin competencias($size){
+    border: 1px solid white;
+    background-color: rgba(255, 255, 255, 0.233);
+    border-radius: 50px;
+    height: $size;
+    width: $size;
+    font-size: 10px;
+    text-align: center;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+//Container de idiomas
+@mixin idiomas{
+    height: 3em;
+    padding: 0px 20px;
+    display: flex;
+    align-items: center;
+
+    img{
+        height: 20px;
+    }
+
+    p{
+        @include nunito(400);
+        margin-left:5px;
+    }
+}
+
+//Barra de idiomas
+
+@mixin barra1($column, $row){
+    border: 1px solid $color4;
+    border-radius: 5px;
+    background-color: transparent;
+    grid-row: $row;
+    grid-column: $column;
+    height: 8px;
+    min-width: 100%;
+    width: 501%;
+    z-index: 10;
+}
+
+@mixin barra2($column, $row, $width){
+    border-radius: 5px;
+    background-color: $color3;
+    grid-row: $row;
+    grid-column: $column;
+    height: 8px;
+    width: $width;
+}
+
+@mixin pivotes($column, $row){
+    background-color: $color4;
+    height: 10px;
+    width: 3px;
+    grid-column: $column;
+    grid-row: $row;
+    align-self: center;
+}
+
+@mixin niveles($column, $row){
+    @include nunito(600);
+    font-size: 10px;
+    grid-column: $column;
+    grid-row: $row;
+    align-self: center;
+}
