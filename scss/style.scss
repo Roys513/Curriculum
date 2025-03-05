@@ -18,18 +18,18 @@ $color6:#FFFFFF;
 body{
     background-color: $color1;
     .whatsapp{
-        a{
-        background-color: green;
-        height: 50px;
-        width: 50px;
-        font-size: 30px;
         position: fixed;
+        width: 55px;
+        height: 55px;
+        line-height: 55px;
         bottom: 2em;
-        right: 2em;
-        text-align: center;
-        align-content: center;
+        right: 3.8em;
+        background-color: #0df053;
+        color: $color6;
         border-radius: 50px;
-        }
+        text-align: center;
+        font-size: 30px;
+        z-index: 10;
     }
 }
 
