@@ -24,6 +24,9 @@ body .whatsapp {
 }
 
 header .name {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(12, 1fr);
   height: 15em;
   position: relative;
 }
@@ -59,11 +62,42 @@ header .name .subt h2 {
   font-style: normal;
   font-size: 14px;
 }
-header .pic .foto {
+header .dropdown {
+  grid-column: 9/11;
+  grid-row: 9/11;
+}
+header .dropdown .btn-secondary {
+  background-color: #001D3D;
+  font-family: "Nunito", serif;
+  font-optical-sizing: auto;
+  font-weight: 200;
+  font-style: normal;
+}
+header .dropdown .btn-check:checked + .btn, header .dropdown .btn.active, header .dropdown .btn.show, header .dropdown .btn:first-child:active, header .dropdown :not(.btn-check) + .btn:active {
+  background-color: #001D3D;
+}
+header .dropdown .dropdown-menu {
+  background-color: #001D3D;
+}
+header .dropdown .dropdown-menu :hover {
+  background-color: #003566;
+}
+header .dropdown .dropdown-menu :active {
+  background-color: #FFD60A;
+}
+header .dropdown .dropdown-menu .dropdown-item {
+  font-family: "Nunito", serif;
+  font-optical-sizing: auto;
+  font-weight: 200;
+  font-style: normal;
+  color: #FFFFFF;
+}
+
+.pic .foto {
   display: flex;
   justify-content: end;
 }
-header .pic .foto img {
+.pic .foto img {
   background-color: rgba(255, 255, 255, 0.168627451);
   border: solid 3px #FFC300;
   padding: 10px 50px;
@@ -74,6 +108,68 @@ header .pic .foto img {
   mask-image: linear-gradient(black 60%, transparent);
 }
 
+main .motivacion {
+  height: 8em;
+  padding-top: 2em;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 150px;
+  height: 30rem;
+  display: block;
+  justify-items: center;
+  align-content: center;
+}
+main .motivacion i {
+  color: #FFC300;
+}
+main .motivacion h2 {
+  height: 2em;
+  align-content: center;
+  color: #FFC300;
+  font-size: 14px;
+  text-transform: uppercase;
+  font-family: "Nunito", serif;
+  font-optical-sizing: auto;
+  font-weight: 200;
+  font-style: normal;
+}
+main .motivacion h2 {
+  border: 2px solid #FFD60A;
+  background-color: rgba(128, 128, 128, 0.4);
+  font-family: "Nunito", serif;
+  font-optical-sizing: auto;
+  font-weight: 200;
+  font-style: normal;
+  height: 100px;
+  width: 300px;
+  margin-bottom: 50px;
+  font-size: 20px;
+}
+main .motivacion p {
+  font-family: "Nunito", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  text-align: center;
+  padding: 0px 40px;
+  font-size: 15px;
+}
+main .motivacion .btn-primary {
+  --bs-btn-bg: #001D3D;
+  --bs-btn-border-color: #003566;
+  --bs-btn-hover-bg:#003566;
+  --bs-btn-hover-border-color:#001D3D;
+  --bs-btn-active-bg:#ffc400a0;
+  --bs-btn-active-border-color:#ffc400a0;
+  margin-top: 30px;
+  font-family: "Nunito", serif;
+  font-optical-sizing: auto;
+  font-weight: 200;
+  font-style: normal;
+  font-size: 14px;
+}
 main .about {
   height: 18em;
 }
@@ -1082,6 +1178,10 @@ footer .address {
   header .name .subt h2 {
     font-size: 170%;
   }
+  header .dropdown {
+    grid-column: 10/12;
+    grid-row: 10/11;
+  }
   header .pic .foto {
     display: flex;
     justify-content: end;
@@ -1095,10 +1195,14 @@ footer .address {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
   }
+  main .motivacion {
+    grid-column: 1/3;
+    grid-row: 1/2;
+  }
   main .about {
     height: 20em;
     grid-column: 1/3;
-    grid-row: 1/2;
+    grid-row: 2/3;
   }
   main .about .info {
     height: 12em;
@@ -1117,7 +1221,7 @@ footer .address {
   }
   main .experience {
     grid-column: 1/3;
-    grid-row: 2/3;
+    grid-row: 3/4;
   }
   main .experience .job1 {
     padding: 0% 10%;
@@ -1145,11 +1249,11 @@ footer .address {
   }
   main .d-license {
     grid-column: 1/3;
-    grid-row: 4/5;
+    grid-row: 5/6;
   }
   main .languages {
     grid-column: 1/3;
-    grid-row: 5/6;
+    grid-row: 6/7;
   }
   footer .contacto {
     padding-left: 4em;
@@ -1162,6 +1266,10 @@ footer .address {
   }
   header .name .subt h2 {
     font-size: 200%;
+  }
+  header .dropdown {
+    grid-column: 10/11;
+    grid-row: 4/5;
   }
 }
 
