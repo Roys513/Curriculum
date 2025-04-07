@@ -135,7 +135,10 @@ main .motivacion h2 {
   font-weight: 200;
   font-style: normal;
 }
-main .motivacion h2 {
+main .motivacion .frase {
+  justify-items: center;
+}
+main .motivacion .frase h2 {
   border: 2px solid #FFD60A;
   background-color: rgba(128, 128, 128, 0.4);
   font-family: "Nunito", serif;
@@ -147,7 +150,7 @@ main .motivacion h2 {
   margin-bottom: 50px;
   font-size: 20px;
 }
-main .motivacion p {
+main .motivacion .frase p {
   font-family: "Nunito", serif;
   font-optical-sizing: auto;
   font-weight: 400;
@@ -156,7 +159,7 @@ main .motivacion p {
   padding: 0px 40px;
   font-size: 15px;
 }
-main .motivacion .btn-primary {
+main .motivacion .frase .btn-primary {
   --bs-btn-bg: #001D3D;
   --bs-btn-border-color: #003566;
   --bs-btn-hover-bg:#003566;

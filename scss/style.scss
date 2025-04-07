@@ -128,31 +128,34 @@ main{
         display: block;
         justify-items: center;
         align-content: center;
-        h2{
-            border: 2px solid $color5;
-            background-color: rgba(128, 128, 128, 0.4);
-            @include recursos.nunito(200);
-            height: 100px;
-            width: 300px;
-            margin-bottom: 50px;
-            font-size: 20px;
-        }
-        p{
-            @include recursos.nunito(400);
-            text-align: center;
-            padding: 0px 40px;
-            font-size: 15px;
-        }
-        .btn-primary {
-            --bs-btn-bg: #001D3D;
-            --bs-btn-border-color: #003566;
-            --bs-btn-hover-bg:#003566;
-            --bs-btn-hover-border-color:#001D3D;
-            --bs-btn-active-bg:#ffc400a0;
-            --bs-btn-active-border-color:#ffc400a0;
-            margin-top: 30px;
-            @include recursos.nunito(200);
-            font-size: 14px;
+        .frase{
+            justify-items: center;
+            h2{
+                border: 2px solid $color5;
+                background-color: rgba(128, 128, 128, 0.4);
+                @include recursos.nunito(200);
+                height: 100px;
+                width: 300px;
+                margin-bottom: 50px;
+                font-size: 20px;
+            }
+            p{
+                @include recursos.nunito(400);
+                text-align: center;
+                padding: 0px 40px;
+                font-size: 15px;
+            }
+            .btn-primary {
+                --bs-btn-bg: #001D3D;
+                --bs-btn-border-color: #003566;
+                --bs-btn-hover-bg:#003566;
+                --bs-btn-hover-border-color:#001D3D;
+                --bs-btn-active-bg:#ffc400a0;
+                --bs-btn-active-border-color:#ffc400a0;
+                margin-top: 30px;
+                @include recursos.nunito(200);
+                font-size: 14px;
+            }
         }
     }
 
