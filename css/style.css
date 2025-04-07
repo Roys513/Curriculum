@@ -136,7 +136,10 @@ main .motivacion h2 {
   font-style: normal;
 }
 main .motivacion .frase {
-  justify-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 main .motivacion .frase h2 {
   border: 2px solid #FFD60A;

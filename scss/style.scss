@@ -129,7 +129,10 @@ main{
         justify-items: center;
         align-content: center;
         .frase{
-            justify-items: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
             h2{
                 border: 2px solid $color5;
                 background-color: rgba(128, 128, 128, 0.4);
