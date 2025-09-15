@@ -100,30 +100,29 @@ header{
     }
 
     .pic{
+        position: relative;
+        height: 400px;
         .foto{
-            display: flex;
-            justify-content: end;
+            position: absolute;
+            right: 50px;
+            bottom: 50px;
+            overflow: hidden;
+            background-color: #ffffff2b;
+            border: solid 3px $color4;            
+            border-radius: 500px;
+            width: 200px;
+            height: 200px;
             img{
-                background-color: #ffffff2b;
-                border: solid 3px $color4;
-                padding: 10px 50px;
-                border-radius: 50%;
-                margin-right: 20px;
-                max-width: 100%;
-                height: 250px;
-                mask-image: linear-gradient(
-                    black 60%, transparent
-                );
+                width: 100%;
+                height: auto
             }
         }
     }
 
 
 main{
-
     .motivacion{
         @include recursos.titulo;
-        margin-top: 150px;
         height: 30rem;
         display: block;
         justify-items: center;
@@ -231,7 +230,7 @@ main{
     }
 
     .formation{
-        height: 46em;
+        height: 83em;
 
         .formacion{
             @include recursos.titulo;
@@ -241,11 +240,11 @@ main{
     .map-formacion{
         display: grid;
         grid-template-columns: 1fr 30px 1fr;
-        grid-template-rows: repeat(5, 120px);
+        grid-template-rows: repeat(10, 120px);
 
         .linea-tiempo{
             grid-column: 2/3;
-            grid-row: 1/6;
+            grid-row: 1/11;
             background-color:$color3;
             justify-self: center;
             width: 4px;
@@ -272,9 +271,29 @@ main{
             @include recursos.puntos(5);
         }
 
+        .punto6{
+            @include recursos.puntos(6);
+        }
+
+        .punto7{
+            @include recursos.puntos(7);
+        }
+
+        .punto8{
+            @include recursos.puntos(8);
+        }
+
+        .punto9{
+            @include recursos.puntos(9);
+        }
+
+        .punto10{
+            @include recursos.puntos(10);
+        }
+
         .eso{
             grid-column: 3/4;
-            grid-row: 1/2;
+            grid-row: 10/11;
             text-align: start;
             align-content: center;
             padding-right: 10px;
@@ -287,7 +306,7 @@ main{
 
         .bach{
             grid-column: 1/2;
-            grid-row: 2/3;
+            grid-row: 9/10;
             text-align: end;
             align-content: center;
             padding-left: 10px;
@@ -300,7 +319,7 @@ main{
 
         .fp{
             grid-column: 3/4;
-            grid-row: 3/4;
+            grid-row: 8/9;
             text-align: start;
             align-content: center;
             padding-right: 10px;
@@ -313,7 +332,7 @@ main{
 
         .curso1{
             grid-column: 1/2;
-            grid-row: 4/5;
+            grid-row: 7/8;
             text-align: end;
             align-content: center;
             padding-left: 10px;
@@ -325,8 +344,73 @@ main{
         }
 
         .curso2{
+            grid-column: 1/2;
+            grid-row: 3/4;
+            text-align: end;
+            align-content: center;
+            padding-right: 10px;
+
+            p{
+                @include recursos.nunito(400);
+                font-size: 10px;
+            }
+        }
+
+        .curso3{
             grid-column: 3/4;
+            grid-row: 2/3;
+            text-align: start;
+            align-content: center;
+            padding-right: 10px;
+
+            p{
+                @include recursos.nunito(400);
+                font-size: 10px;
+            }
+        }
+
+        .curso4{
+            grid-column: 1/2;
+            grid-row: 1/2;
+            text-align: end;
+            align-content: center;
+            padding-right: 10px;
+
+            p{
+                @include recursos.nunito(400);
+                font-size: 10px;
+            }
+        }
+
+        .curso5{
+            grid-column: 3/4;
+            grid-row: 6/7;
+            text-align: start;
+            align-content: center;
+            padding-right: 10px;
+
+            p{
+                @include recursos.nunito(400);
+                font-size: 10px;
+            }
+        }
+
+        .curso6{
+            grid-column: 1/2;
             grid-row: 5/6;
+            text-align: end;
+            align-content: center;
+            padding-right: 10px;
+
+            p{
+                @include recursos.nunito(400);
+                font-size: 10px;
+            }
+        }
+
+        .curso7{
+            grid-column: 3/4;
+            grid-row: 4/5;
             text-align: start;
             align-content: center;
             padding-right: 10px;
@@ -490,6 +574,10 @@ main{
             .ingles{
                 @include recursos.idiomas;
                 grid-row: 1/4;
+
+                .ingles__parrafo{
+                    margin: 0 auto;
+                }
             }
             
             .barra-ingles1{
@@ -547,6 +635,10 @@ main{
             .portugues{
                 @include recursos.idiomas;
                 grid-row: 4/7;
+
+                .portugues__parrafo{
+                    margin: 0 auto;
+                }
             }
 
             .barra-portugues1{
@@ -604,6 +696,10 @@ main{
             .frances{
                 @include recursos.idiomas;
                 grid-row: 7/10;
+
+                .frances__parrafo{
+                    margin: 0 auto;
+                }
             }
 
             .barra-frances1{
@@ -753,12 +849,7 @@ footer{
 
         .pic{
             .foto{
-                display: flex;
-                justify-content: end;
-                img{
-                    margin-right: 200px;
-                    height: 400px;
-                }
+                right: 200px;
             }
         }
     }
@@ -772,19 +863,22 @@ footer{
             grid-row: 1/2;
         }
         .about{
-            height: 20em;
+            height: 30em;
             grid-column: 1/3;
             grid-row:2/3;
             .info{
-                height: 12em;
-                padding: 0% 10%;
+                max-width: 80%;
+                height: 70%;
+                padding: 0 6rem;
+                margin: 0 auto;
                 display: flex;
                 justify-content: center;
                 align-items: center;
                 p{
                     @include recursos.nunito(300);
-                    font-size: 100%;
-                    line-height: 160%;
+                    font-size: 14px;
+                    line-height: 1.8;
+                    text-align: justify;
                 }
             }
         }
@@ -811,6 +905,90 @@ footer{
                 p{
                     @include recursos.nunito(300);
                     font-size: 90%;
+                }
+            }
+        }
+
+        .formation{
+            padding: 0 3rem;
+
+        .eso{
+
+            p{
+                font-size: 13px;
+            }
+        }
+
+        .bach{
+
+            p{
+                font-size: 13px;
+            }
+        }
+
+        .fp{
+
+            p{
+                font-size: 13px;
+            }
+        }
+
+        .curso1{
+
+            p{
+                font-size: 13px;
+            }
+        }
+
+        .curso2{
+
+            p{
+                font-size: 13px;
+            }
+        }
+
+        .curso3{
+
+            p{
+                font-size: 13px;
+            }
+        }
+
+        .curso4{
+
+            p{
+                font-size: 13px;
+            }
+        }
+
+        .curso5{
+
+            p{
+                font-size: 13px;
+            }
+        }
+
+        .curso6{
+
+            p{
+                font-size: 13px;
+            }
+        }
+
+        .curso7{
+        
+            p{
+                font-size: 13px;
+            }
+        }
+    }
+
+        .skills{
+            height: 100%;
+
+            .lista-skills{
+                ul{
+                    grid-template-rows: repeat(5, 240px);
                 }
             }
         }
